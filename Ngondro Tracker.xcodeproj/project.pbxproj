@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9438A3A284974C30063FDE2 /* Ngondro_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */; };
+		F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A3B284974C30063FDE2 /* ContentView.swift */; };
+		F9438A3E284974C40063FDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9438A3D284974C40063FDE2 /* Assets.xcassets */; };
+		F9438A41284974C40063FDE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9438A40284974C40063FDE2 /* Preview Assets.xcassets */; };
+		F9438A4B284974C40063FDE2 /* Ngondro_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A4A284974C40063FDE2 /* Ngondro_TrackerTests.swift */; };
+		F9438A55284974C40063FDE2 /* Ngondro_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A54284974C40063FDE2 /* Ngondro_TrackerUITests.swift */; };
+		F9438A57284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9438A47284974C40063FDE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9438A2E284974C30063FDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9438A35284974C30063FDE2;
+			remoteInfo = "Ngondro Tracker";
+		};
+		F9438A51284974C40063FDE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9438A2E284974C30063FDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9438A35284974C30063FDE2;
+			remoteInfo = "Ngondro Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9438A36284974C30063FDE2 /* Ngondro Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ngondro Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerApp.swift; sourceTree = "<group>"; };
+		F9438A3B284974C30063FDE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9438A3D284974C40063FDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9438A40284974C40063FDE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F9438A46284974C40063FDE2 /* Ngondro TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ngondro TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9438A4A284974C40063FDE2 /* Ngondro_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerTests.swift; sourceTree = "<group>"; };
+		F9438A50284974C40063FDE2 /* Ngondro TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ngondro TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9438A54284974C40063FDE2 /* Ngondro_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerUITests.swift; sourceTree = "<group>"; };
+		F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9438A33284974C30063FDE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9438A43284974C40063FDE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9438A4D284974C40063FDE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9438A2D284974C30063FDE2 = {
+			isa = PBXGroup;
+			children = (
+				F9438A38284974C30063FDE2 /* Ngondro Tracker */,
+				F9438A49284974C40063FDE2 /* Ngondro TrackerTests */,
+				F9438A53284974C40063FDE2 /* Ngondro TrackerUITests */,
+				F9438A37284974C30063FDE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9438A37284974C30063FDE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9438A36284974C30063FDE2 /* Ngondro Tracker.app */,
+				F9438A46284974C40063FDE2 /* Ngondro TrackerTests.xctest */,
+				F9438A50284974C40063FDE2 /* Ngondro TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9438A38284974C30063FDE2 /* Ngondro Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */,
+				F9438A3B284974C30063FDE2 /* ContentView.swift */,
+				F9438A3D284974C40063FDE2 /* Assets.xcassets */,
+				F9438A3F284974C40063FDE2 /* Preview Content */,
+			);
+			path = "Ngondro Tracker";
+			sourceTree = "<group>";
+		};
+		F9438A3F284974C40063FDE2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F9438A40284974C40063FDE2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9438A49284974C40063FDE2 /* Ngondro TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9438A4A284974C40063FDE2 /* Ngondro_TrackerTests.swift */,
+			);
+			path = "Ngondro TrackerTests";
+			sourceTree = "<group>";
+		};
+		F9438A53284974C40063FDE2 /* Ngondro TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9438A54284974C40063FDE2 /* Ngondro_TrackerUITests.swift */,
+				F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */,
+			);
+			path = "Ngondro TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9438A35284974C30063FDE2 /* Ngondro Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9438A5A284974C40063FDE2 /* Build configuration list for PBXNativeTarget "Ngondro Tracker" */;
+			buildPhases = (
+				F9438A32284974C30063FDE2 /* Sources */,
+				F9438A33284974C30063FDE2 /* Frameworks */,
+				F9438A34284974C30063FDE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ngondro Tracker";
+			productName = "Ngondro Tracker";
+			productReference = F9438A36284974C30063FDE2 /* Ngondro Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9438A45284974C40063FDE2 /* Ngondro TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9438A5D284974C40063FDE2 /* Build configuration list for PBXNativeTarget "Ngondro TrackerTests" */;
+			buildPhases = (
+				F9438A42284974C40063FDE2 /* Sources */,
+				F9438A43284974C40063FDE2 /* Frameworks */,
+				F9438A44284974C40063FDE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9438A48284974C40063FDE2 /* PBXTargetDependency */,
+			);
+			name = "Ngondro TrackerTests";
+			productName = "Ngondro TrackerTests";
+			productReference = F9438A46284974C40063FDE2 /* Ngondro TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9438A4F284974C40063FDE2 /* Ngondro TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9438A60284974C40063FDE2 /* Build configuration list for PBXNativeTarget "Ngondro TrackerUITests" */;
+			buildPhases = (
+				F9438A4C284974C40063FDE2 /* Sources */,
+				F9438A4D284974C40063FDE2 /* Frameworks */,
+				F9438A4E284974C40063FDE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9438A52284974C40063FDE2 /* PBXTargetDependency */,
+			);
+			name = "Ngondro TrackerUITests";
+			productName = "Ngondro TrackerUITests";
+			productReference = F9438A50284974C40063FDE2 /* Ngondro TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9438A2E284974C30063FDE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					F9438A35284974C30063FDE2 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					F9438A45284974C40063FDE2 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = F9438A35284974C30063FDE2;
+					};
+					F9438A4F284974C40063FDE2 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = F9438A35284974C30063FDE2;
+					};
+				};
+			};
+			buildConfigurationList = F9438A31284974C30063FDE2 /* Build configuration list for PBXProject "Ngondro Tracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9438A2D284974C30063FDE2;
+			productRefGroup = F9438A37284974C30063FDE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9438A35284974C30063FDE2 /* Ngondro Tracker */,
+				F9438A45284974C40063FDE2 /* Ngondro TrackerTests */,
+				F9438A4F284974C40063FDE2 /* Ngondro TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9438A34284974C30063FDE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9438A41284974C40063FDE2 /* Preview Assets.xcassets in Resources */,
+				F9438A3E284974C40063FDE2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9438A44284974C40063FDE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9438A4E284974C40063FDE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9438A32284974C30063FDE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */,
+				F9438A3A284974C30063FDE2 /* Ngondro_TrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9438A42284974C40063FDE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9438A4B284974C40063FDE2 /* Ngondro_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9438A4C284974C40063FDE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9438A55284974C40063FDE2 /* Ngondro_TrackerUITests.swift in Sources */,
+				F9438A57284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9438A48284974C40063FDE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9438A35284974C30063FDE2 /* Ngondro Tracker */;
+			targetProxy = F9438A47284974C40063FDE2 /* PBXContainerItemProxy */;
+		};
+		F9438A52284974C40063FDE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9438A35284974C30063FDE2 /* Ngondro Tracker */;
+			targetProxy = F9438A51284974C40063FDE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F9438A58284974C40063FDE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9438A59284974C40063FDE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9438A5B284974C40063FDE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ngondro Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NA23KR8V6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.moroz.Ngondro-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9438A5C284974C40063FDE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ngondro Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NA23KR8V6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.moroz.Ngondro-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9438A5E284974C40063FDE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7NA23KR8V6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.moroz.Ngondro-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ngondro Tracker.app/Ngondro Tracker";
+			};
+			name = Debug;
+		};
+		F9438A5F284974C40063FDE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7NA23KR8V6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.moroz.Ngondro-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ngondro Tracker.app/Ngondro Tracker";
+			};
+			name = Release;
+		};
+		F9438A61284974C40063FDE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7NA23KR8V6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.moroz.Ngondro-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ngondro Tracker";
+			};
+			name = Debug;
+		};
+		F9438A62284974C40063FDE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7NA23KR8V6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.moroz.Ngondro-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ngondro Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9438A31284974C30063FDE2 /* Build configuration list for PBXProject "Ngondro Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9438A58284974C40063FDE2 /* Debug */,
+				F9438A59284974C40063FDE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9438A5A284974C40063FDE2 /* Build configuration list for PBXNativeTarget "Ngondro Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9438A5B284974C40063FDE2 /* Debug */,
+				F9438A5C284974C40063FDE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9438A5D284974C40063FDE2 /* Build configuration list for PBXNativeTarget "Ngondro TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9438A5E284974C40063FDE2 /* Debug */,
+				F9438A5F284974C40063FDE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9438A60284974C40063FDE2 /* Build configuration list for PBXNativeTarget "Ngondro TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9438A61284974C40063FDE2 /* Debug */,
+				F9438A62284974C40063FDE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9438A2E284974C30063FDE2 /* Project object */;
+}
