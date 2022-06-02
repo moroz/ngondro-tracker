@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F915870F28497A2800105AE3 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = F915870E28497A2800105AE3 /* SQLite */; };
+		F915871128497A8D00105AE3 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915871028497A8D00105AE3 /* DataStore.swift */; };
+		F915871328497BAC00105AE3 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915871228497BAC00105AE3 /* Practice.swift */; };
 		F9438A3A284974C30063FDE2 /* Ngondro_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */; };
 		F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A3B284974C30063FDE2 /* ContentView.swift */; };
 		F9438A3E284974C40063FDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9438A3D284974C40063FDE2 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F915871028497A8D00105AE3 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		F915871228497BAC00105AE3 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		F9438A36284974C30063FDE2 /* Ngondro Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ngondro Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerApp.swift; sourceTree = "<group>"; };
 		F9438A3B284974C30063FDE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F915871428497BB300105AE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F915871228497BAC00105AE3 /* Practice.swift */,
+				F915871028497A8D00105AE3 /* DataStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F9438A2D284974C30063FDE2 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 				F9438A3B284974C30063FDE2 /* ContentView.swift */,
 				F9438A3D284974C40063FDE2 /* Assets.xcassets */,
 				F9438A3F284974C40063FDE2 /* Preview Content */,
+				F915871428497BB300105AE3 /* Models */,
 			);
 			path = "Ngondro Tracker";
 			sourceTree = "<group>";
@@ -265,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F915871328497BAC00105AE3 /* Practice.swift in Sources */,
 				F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */,
+				F915871128497A8D00105AE3 /* DataStore.swift in Sources */,
 				F9438A3A284974C30063FDE2 /* Ngondro_TrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
