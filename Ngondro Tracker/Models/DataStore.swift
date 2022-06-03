@@ -19,6 +19,8 @@ enum DatabaseError: Error {
 class DataStore: ObservableObject {
   private(set) var connection: SQLite.Connection? = nil
 
+  @Published var practices: [Practice] = []
+
   init() {
     do {
       _ = try connect()
@@ -31,6 +33,11 @@ class DataStore: ObservableObject {
     } catch {
       fatalError("Could not migrate database schema.")
     }
+  }
+
+  func loadPractices() throws {
+    guard practices.count == 0 else { return }
+    practices = try Practice.all(store: self)
   }
 
   func getURL() -> URL? {

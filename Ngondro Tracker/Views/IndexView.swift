@@ -9,27 +9,18 @@ import SwiftUI
 
 struct IndexView: View {
   @EnvironmentObject private var dataStore: DataStore
-  @State private var loading: Bool = true
-  @State private var practices: [Practice] = []
-
-  func loadData() {
-    if let results = try? Practice.all(store: dataStore) {
-      practices = results
-      loading = false
-    }
-  }
 
   var body: some View {
     Group {
-      if loading {
+      if dataStore.practices.count == 0 {
         Text("Loading...")
       } else {
-        List(practices) { row in
-          Text(row.name)
+        List(dataStore.practices) { row in
+          NavigationLink(row.name, destination: PracticeView(id: row.id))
         }
       }
     }
-    .onAppear { loadData() }
+    .onAppear { try? dataStore.loadPractices() }
   }
 }
 
