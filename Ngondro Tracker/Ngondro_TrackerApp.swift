@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Ngondro_TrackerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @StateObject private var dataStore = DataStore()
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environmentObject(dataStore)
     }
+  }
 }

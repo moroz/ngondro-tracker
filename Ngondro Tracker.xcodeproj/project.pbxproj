@@ -17,6 +17,7 @@
 		F9438A4B284974C40063FDE2 /* Ngondro_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A4A284974C40063FDE2 /* Ngondro_TrackerTests.swift */; };
 		F9438A55284974C40063FDE2 /* Ngondro_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A54284974C40063FDE2 /* Ngondro_TrackerUITests.swift */; };
 		F9438A57284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */; };
+		F95C14E3284AA0C700D03722 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C14E2284AA0C700D03722 /* IndexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F9438A50284974C40063FDE2 /* Ngondro TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ngondro TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9438A54284974C40063FDE2 /* Ngondro_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerUITests.swift; sourceTree = "<group>"; };
 		F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F95C14E2284AA0C700D03722 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */,
 				F9438A3B284974C30063FDE2 /* ContentView.swift */,
+				F95C14E4284AA0CF00D03722 /* Views */,
 				F9438A3D284974C40063FDE2 /* Assets.xcassets */,
 				F9438A3F284974C40063FDE2 /* Preview Content */,
 				F915871428497BB300105AE3 /* Models */,
@@ -141,6 +144,14 @@
 				F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */,
 			);
 			path = "Ngondro TrackerUITests";
+			sourceTree = "<group>";
+		};
+		F95C14E4284AA0CF00D03722 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F95C14E2284AA0C700D03722 /* IndexView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				F915871328497BAC00105AE3 /* Practice.swift in Sources */,
 				F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */,
 				F915871128497A8D00105AE3 /* DataStore.swift in Sources */,
+				F95C14E3284AA0C700D03722 /* IndexView.swift in Sources */,
 				F9438A3A284974C30063FDE2 /* Ngondro_TrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
