@@ -20,8 +20,16 @@ class DataStore: ObservableObject {
   private(set) var connection: SQLite.Connection? = nil
 
   init() {
-    if let _ = try? connect() {
-      try? migrate()
+    do {
+      _ = try connect()
+    } catch {
+      fatalError("Could not connect to the database.")
+    }
+
+    do {
+      _ = try migrate()
+    } catch {
+      fatalError("Could not migrate database schema.")
     }
   }
 
@@ -50,12 +58,20 @@ class DataStore: ObservableObject {
   }
 
   func migrate() throws {
+    guard let db = connection else {
+      throw DatabaseError.connectionError
+    }
+
     print("Running migrations")
-    if try Practice.createTable(store: self) {
-      try Practice.seed(store: self)
+
+    if db.userVersion == 0 {
+      if try Practice.createTable(store: self) {
+        try Practice.seed(store: self)
+      }
+      db.userVersion = 1
     }
   }
-  
+
   func tableExists(_ tableName: String) throws -> Bool {
     guard let db = connection else {
       throw DatabaseError.connectionError

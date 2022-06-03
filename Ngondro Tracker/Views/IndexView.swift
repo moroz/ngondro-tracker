@@ -23,20 +23,19 @@ struct IndexView: View {
     Group {
       if loading {
         Text("Loading...")
-      }else {
-        List {
-          ForEach(practices, id: \.id ) { row in
-            Text(row.name)
-          }
+      } else {
+        List(practices) { row in
+          Text(row.name)
         }
       }
     }
-      .onAppear { loadData() }
+    .onAppear { loadData() }
   }
 }
 
 struct IndexView_Previews: PreviewProvider {
   static var previews: some View {
     IndexView()
+      .environmentObject(DataStore())
   }
 }
