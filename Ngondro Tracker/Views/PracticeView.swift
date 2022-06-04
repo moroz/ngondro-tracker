@@ -16,14 +16,28 @@ struct PracticeView: View {
   }
 
   var body: some View {
-    return VStack {
-      if let practice = practice {
-        Text(practice.name)
-          .font(.title3)
-        Text(String(practice.currentAmount))
-          .font(.title2)
-      } else {
-        Text("Loading...")
+    GeometryReader { geometry in
+      VStack {
+        if let practice = practice {
+          Image("refuge")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
+            .clipped()
+          Text(practice.name)
+            .font(.title2)
+          Text(String(practice.currentAmount))
+            .font(.system(size: 50.0))
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(.top, 10.0)
+          Button("+\(practice.malaSize)") {}
+            .buttonStyle(.bordered)
+            .tint(.red)
+            .controlSize(.large)
+        } else {
+          Text("Loading...")
+        }
       }
     }
     .onAppear { try? dataStore.loadPractices() }
