@@ -19,11 +19,14 @@ struct PracticeView: View {
     GeometryReader { geometry in
       VStack {
         if let practice = practice {
-          Image("refuge")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
-            .clipped()
+          if let image = practice.image {
+            Image(image)
+              .resizable()
+              .aspectRatio(contentMode: .fill)
+              .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
+              .clipped()
+            Text(image)
+          }
           Text(practice.name)
             .font(.title2)
           Text(String(practice.currentAmount))

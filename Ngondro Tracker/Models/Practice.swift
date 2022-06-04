@@ -27,7 +27,7 @@ struct Practice: Identifiable {
   init(id: Int, name: String, image: String?, targetAmount: Int, currentAmount: Int, malaSize: Int) {
     self.id = id
     self.name = name
-    self.image = name
+    self.image = image
     self.targetAmount = targetAmount
     self.currentAmount = currentAmount
     self.malaSize = malaSize
