@@ -26,8 +26,10 @@ struct Practice: Identifiable {
 
   init() {}
 
-  init(id: Int, name: String, image: String?, targetAmount: Int = 111_111, currentAmount: Int = 0, malaSize: Int = 108)
-  {
+  init(
+    id: Int, name: String, image: String?, targetAmount: Int = 111_111, currentAmount: Int = 0,
+    malaSize: Int = 108
+  ) {
     self.id = id
     self.name = name
     self.image = image
@@ -62,11 +64,12 @@ struct Practice: Identifiable {
       throw DatabaseError.connectionError
     }
 
-    _ = try db.scalar(
-      "update practices set current_amount = current_amount + ? where id = ? returning current_amount",
+    _ = try db.run(
+      "update practices set current_amount = current_amount + ? where id = ?",
       amount, id)
-    
-    let newAmount = try db.scalar(Practice.table.select(Practice.currentAmount).filter(Practice.id == self.id))
+
+    let newAmount = try db.scalar(
+      Practice.table.select(Practice.currentAmount).filter(Practice.id == self.id))
 
     return newAmount
   }

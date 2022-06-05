@@ -22,9 +22,9 @@ class DataStore: ObservableObject {
   @Published var practices: [Practice] = []
 
   init() {
-    #if DEBUG
-      try? FileManager.default.removeItem(at: getURL()!)
-    #endif
+    /* #if DEBUG */
+    /*   try? FileManager.default.removeItem(at: getURL()!) */
+    /* #endif */
 
     do {
       _ = try connect()
