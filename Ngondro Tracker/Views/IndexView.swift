@@ -18,6 +18,7 @@ struct IndexView: View {
         List(dataStore.practices) { row in
           NavigationLink(row.name, destination: PracticeView(id: row.id))
         }
+        .navigationTitle("Practices")
       }
     }
     .onAppear { try? dataStore.loadPractices() }

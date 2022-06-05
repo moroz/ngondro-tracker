@@ -23,10 +23,11 @@ struct PracticeView: View {
             Image(image)
               .resizable()
               .aspectRatio(contentMode: .fill)
+              .ignoresSafeArea(edges: .top)
               .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
               .clipped()
-            Text(image)
           }
+          Spacer()
           Text(practice.name)
             .font(.title2)
           Text(String(practice.currentAmount))
@@ -38,12 +39,15 @@ struct PracticeView: View {
             .buttonStyle(.bordered)
             .tint(.red)
             .controlSize(.large)
+          Spacer()
         } else {
           Text("Loading...")
         }
       }
     }
     .onAppear { try? dataStore.loadPractices() }
+    .navigationTitle(practice?.name ?? "")
+    .navigationBarTitleDisplayMode(.inline)
   }
 }
 
