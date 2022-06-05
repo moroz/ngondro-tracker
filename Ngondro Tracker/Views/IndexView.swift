@@ -15,8 +15,8 @@ struct IndexView: View {
       if dataStore.practices.count == 0 {
         Text("Loading...")
       } else {
-        List(dataStore.practices) { row in
-          NavigationLink(row.name, destination: PracticeView(id: row.id))
+        List(dataStore.practices) { practice in
+          NavigationLink(practice.name, destination: PracticeView(practice: practice))
         }
         .navigationTitle("Practices")
       }

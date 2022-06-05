@@ -19,6 +19,8 @@
 		F9438A57284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */; };
 		F95C14E3284AA0C700D03722 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C14E2284AA0C700D03722 /* IndexView.swift */; };
 		F95C14E6284AB16900D03722 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C14E5284AB16900D03722 /* PracticeView.swift */; };
+		F9F903A7284D35F8005EDC32 /* PracticeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F903A6284D35F8005EDC32 /* PracticeSession.swift */; };
+		F9F903A9284D3846005EDC32 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F903A8284D3845005EDC32 /* Date+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		F9438A56284974C40063FDE2 /* Ngondro_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ngondro_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F95C14E2284AA0C700D03722 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		F95C14E5284AB16900D03722 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		F9F903A6284D35F8005EDC32 /* PracticeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSession.swift; sourceTree = "<group>"; };
+		F9F903A8284D3845005EDC32 /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F915871428497BB300105AE3 /* Models */ = {
+		F915871428497BB300105AE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F915871228497BAC00105AE3 /* Practice.swift */,
 				F915871028497A8D00105AE3 /* DataStore.swift */,
+				F9F903A6284D35F8005EDC32 /* PracticeSession.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F9438A2D284974C30063FDE2 = {
@@ -114,11 +119,12 @@
 			isa = PBXGroup;
 			children = (
 				F9438A39284974C30063FDE2 /* Ngondro_TrackerApp.swift */,
+				F9F903A8284D3845005EDC32 /* Date+Helpers.swift */,
 				F9438A3B284974C30063FDE2 /* ContentView.swift */,
 				F95C14E4284AA0CF00D03722 /* Views */,
 				F9438A3D284974C40063FDE2 /* Assets.xcassets */,
 				F9438A3F284974C40063FDE2 /* Preview Content */,
-				F915871428497BB300105AE3 /* Models */,
+				F915871428497BB300105AE3 /* Model */,
 			);
 			path = "Ngondro Tracker";
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F915871328497BAC00105AE3 /* Practice.swift in Sources */,
+				F9F903A9284D3846005EDC32 /* Date+Helpers.swift in Sources */,
+				F9F903A7284D35F8005EDC32 /* PracticeSession.swift in Sources */,
 				F95C14E6284AB16900D03722 /* PracticeView.swift in Sources */,
 				F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */,
 				F915871128497A8D00105AE3 /* DataStore.swift in Sources */,

@@ -25,7 +25,7 @@ class DataStore: ObservableObject {
     #if DEBUG
       try? FileManager.default.removeItem(at: getURL()!)
     #endif
-    
+
     do {
       _ = try connect()
     } catch {
@@ -40,7 +40,6 @@ class DataStore: ObservableObject {
   }
 
   func loadPractices() throws {
-    guard practices.count == 0 else { return }
     practices = try Practice.all(store: self)
   }
 

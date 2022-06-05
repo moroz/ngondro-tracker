@@ -9,51 +9,54 @@ import SwiftUI
 
 struct PracticeView: View {
   @EnvironmentObject var dataStore: DataStore
-  let id: Int
+  let practice: Practice
+  @State private var amount: Int
 
-  var practice: Practice? {
-    dataStore.practices.first { $0.id == id }
+  init(practice: Practice) {
+    self.practice = practice
+    amount = practice.currentAmount
+  }
+
+  func addAmount(amount newAmount: Int) throws {
+    amount = try practice.addAmount(store: dataStore, amount: newAmount)
   }
 
   var body: some View {
     GeometryReader { geometry in
       VStack {
-        if let practice = practice {
-          if let image = practice.image {
-            Image(image)
-              .resizable()
-              .aspectRatio(contentMode: .fill)
-              .ignoresSafeArea(edges: .top)
-              .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
-              .clipped()
-          }
-          Spacer()
-          Text(practice.name)
-            .font(.title2)
-          Text(String(practice.currentAmount))
-            .font(.system(size: 50.0))
-            .fontWeight(.medium)
-            .multilineTextAlignment(.center)
-            .padding(.top, 10.0)
-          Button("+\(practice.malaSize)") {}
-            .buttonStyle(.bordered)
-            .tint(.red)
-            .controlSize(.large)
-          Spacer()
-        } else {
-          Text("Loading...")
+        if let image = practice.image {
+          Image(image)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .ignoresSafeArea(edges: .top)
+            .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
+            .clipped()
         }
+        Spacer()
+        Text(String(amount))
+          .font(.system(size: 40.0))
+          .fontWeight(.medium)
+          .multilineTextAlignment(.center)
+          .padding(.top, 10.0)
+        Button("+\(practice.malaSize)") {
+          try? addAmount(amount: practice.malaSize)
+        }
+        .buttonStyle(.bordered)
+        .tint(.red)
+        .controlSize(.large)
+
+        Spacer()
       }
     }
-    .onAppear { try? dataStore.loadPractices() }
-    .navigationTitle(practice?.name ?? "")
+    .navigationTitle(practice.name)
     .navigationBarTitleDisplayMode(.inline)
   }
 }
 
 struct PracticeView_Previews: PreviewProvider {
   static var previews: some View {
-    PracticeView(id: 1)
+    let practice = Practice(id: 1, name: "Refuge", image: "refuge")
+    return PracticeView(practice: practice)
       .environmentObject(DataStore())
   }
 }
