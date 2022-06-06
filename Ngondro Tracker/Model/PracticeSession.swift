@@ -18,5 +18,11 @@ struct PracticeSession: Identifiable {
   let id: Int
   let practiceId: Int
   let date: String = Date().dateString
+  let amount: Int
 
+  static func addAmount(store: DataStore, practiceId: Int, amount: Int) throws {
+    guard let db = store.connection else {
+      throw DatabaseError.connectionError
+    }
+  }
 }
