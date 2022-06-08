@@ -8,7 +8,7 @@
 import Foundation
 import SQLite
 
-struct Practice: Identifiable {
+struct Practice: Identifiable, Codable {
   static let table = Table("practices")
   static let id = Expression<Int>("id")
   static let name = Expression<String>("name")
@@ -23,6 +23,15 @@ struct Practice: Identifiable {
   var targetAmount: Int = 111_111
   var currentAmount: Int = 0
   var malaSize: Int = 108
+
+  enum CodingKeys: String, CodingKey {
+    case id
+    case name
+    case image
+    case targetAmount = "target_amount"
+    case currentAmount = "current_amount"
+    case malaSize = "mala_size"
+  }
 
   init() {}
 
@@ -39,9 +48,8 @@ struct Practice: Identifiable {
   }
 
   static func createTable(store: DataStore) throws -> Bool {
-    guard let db = store.connection else {
-      throw DatabaseError.connectionError
-    }
+    let db = store.db
+
     guard let exists = try? store.tableExists("practices"), !exists else {
       return false
     }
@@ -60,13 +68,14 @@ struct Practice: Identifiable {
   }
 
   func addAmount(store: DataStore, amount: Int) throws -> Int {
-    guard let db = store.connection else {
-      throw DatabaseError.connectionError
-    }
+    let db = store.db
 
-    _ = try db.run(
-      "update practices set current_amount = current_amount + ? where id = ?",
-      amount, id)
+    try db.transaction {
+      _ = try db.run(
+        "update practices set current_amount = current_amount + ? where id = ?",
+        amount, id)
+      _ = try PracticeSession.addAmount(store: store, practiceId: id, amount: amount)
+    }
 
     let newAmount = try db.scalar(
       Practice.table.select(Practice.currentAmount).filter(Practice.id == self.id))
@@ -80,27 +89,23 @@ struct Practice: Identifiable {
   ]
 
   static func seed(store: DataStore) throws {
-    guard let db = store.connection else {
-      throw DatabaseError.connectionError
-    }
-
-    for (practice, img) in seedData {
-      try db.run(table.insert(name <- practice, image <- img))
+    try store.db.transaction {
+      for (practice, img) in seedData {
+        var row = Self()
+        row.name = practice
+        row.image = img
+        try store.db.run(table.insert(row))
+      }
     }
   }
 
   static func all(store: DataStore) throws -> [Practice] {
-    guard let db = store.connection else {
-      throw DatabaseError.connectionError
-    }
-
-    if let rows = try? db.prepare(table) {
-      return rows.map { row in
-        Practice(
-          id: row[id], name: row[name], image: row[image], targetAmount: row[targetAmount],
-          currentAmount: row[currentAmount], malaSize: row[malaSize])
+    do {
+      let rows: [Self] = try store.db.prepare(table).map { row in
+        return try row.decode()
       }
-    } else {
+      return rows
+    } catch {
       throw DatabaseError.queryError
     }
   }

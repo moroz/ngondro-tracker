@@ -17,7 +17,7 @@ enum DatabaseError: Error {
 }
 
 class DataStore: ObservableObject {
-  private(set) var connection: SQLite.Connection? = nil
+  private(set) var db: SQLite.Connection
 
   @Published var practices: [Practice] = []
 
@@ -26,11 +26,7 @@ class DataStore: ObservableObject {
     /*   try? FileManager.default.removeItem(at: getURL()!) */
     /* #endif */
 
-    do {
-      _ = try connect()
-    } catch {
-      fatalError("Could not connect to the database.")
-    }
+    db = Self.connect()
 
     do {
       _ = try migrate()
@@ -43,35 +39,31 @@ class DataStore: ObservableObject {
     practices = try Practice.all(store: self)
   }
 
-  func getURL() -> URL? {
+  private static func getURL() -> URL {
     guard
       let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         .first
     else {
-      return nil
+      fatalError("Could not resolve database URL")
     }
     return documentsURL.appendingPathComponent(DATABASE_FILE_NAME)
   }
 
-  func connect() throws -> SQLite.Connection? {
-    guard let url = getURL() else {
-      throw DatabaseError.urlError
-    }
-    print("Connecting to database:", url)
+  private static func connect() -> SQLite.Connection {
+    let url = getURL()
+    #if DEBUG
+      print("Connecting to SQLite database at \(url)")
+    #endif
+    var connection: SQLite.Connection
     do {
       connection = try SQLite.Connection(url.absoluteString)
     } catch {
-      throw DatabaseError.connectionError
+      fatalError("Could not connect to the database.")
     }
-    print("Connected to database")
     return connection
   }
 
   func migrate() throws {
-    guard let db = connection else {
-      throw DatabaseError.connectionError
-    }
-
     print("Running migrations")
 
     if db.userVersion == 0 {
@@ -80,13 +72,13 @@ class DataStore: ObservableObject {
       }
       db.userVersion = 1
     }
+    if db.userVersion == 1 {
+      try PracticeSession.createTable(store: self)
+      db.userVersion = 2
+    }
   }
 
   func tableExists(_ tableName: String) throws -> Bool {
-    guard let db = connection else {
-      throw DatabaseError.connectionError
-    }
-
     let master = Table("sqlite_master")
     let name = Expression<String>("name")
     let type = Expression<String>("type")

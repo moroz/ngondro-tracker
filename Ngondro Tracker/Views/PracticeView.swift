@@ -39,6 +39,7 @@ struct PracticeView: View {
   }
 
   func addAmount(amount newAmount: Int) throws {
+    amount += newAmount
     amount = try practice.addAmount(store: dataStore, amount: newAmount)
   }
 
@@ -84,6 +85,7 @@ struct PracticeView: View {
         Spacer()
       }
     }
+    .ignoresSafeArea(edges: .bottom)
     .navigationTitle(practice.name)
     .navigationBarTitleDisplayMode(.inline)
   }
