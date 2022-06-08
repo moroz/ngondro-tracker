@@ -22,7 +22,7 @@ struct Practice: Identifiable, Codable {
   var image: String?
   var targetAmount: Int = 111_111
   var currentAmount: Int = 0
-  var malaSize: Int = 108
+  var malaSize: Int = 100
 
   enum CodingKeys: String, CodingKey {
     case id
@@ -90,8 +90,9 @@ struct Practice: Identifiable, Codable {
 
   static func seed(store: DataStore) throws {
     try store.db.transaction {
-      for (practice, img) in seedData {
+      for (i, (practice, img)) in seedData.enumerated() {
         var row = Self()
+        row.id = i
         row.name = practice
         row.image = img
         try store.db.run(table.insert(row))
