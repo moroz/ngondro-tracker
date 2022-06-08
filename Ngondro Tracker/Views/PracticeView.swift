@@ -83,6 +83,11 @@ struct PracticeView: View {
         .controlSize(.large)
 
         Spacer()
+        NavigationLink {
+          HistoryView(practice: practice)
+        } label: {
+          Text("History")
+        }
       }
     }
     .ignoresSafeArea(edges: .bottom)

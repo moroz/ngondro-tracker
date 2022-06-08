@@ -19,8 +19,8 @@ struct PracticeSession: Identifiable, Codable {
   var practiceId: Int
   var date: String
   var amount: Int
-
-  enum codingKeys: String, CodingKey {
+  
+  enum CodingKeys: String, CodingKey {
     case id
     case practiceId = "practice_id"
     case date
@@ -54,8 +54,8 @@ struct PracticeSession: Identifiable, Codable {
     try store.db.run(query, practiceId, amount, Date().dateString)
   }
 
-  static func filterByPractice(store: DataStore, practiceId: Int) throws -> [Self] {
-    let query = sessions.filter(Self.practiceId == practiceId).order(date.desc)
+  static func filterByPractice(store: DataStore, practiceId pid: Int) throws -> [Self] {
+    let query = sessions.filter(practiceId == pid).order(date.desc)
 
     do {
       let rows: [Self] = try store.db.prepare(query).map { row in

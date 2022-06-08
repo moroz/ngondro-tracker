@@ -20,6 +20,7 @@
 		F95C14E3284AA0C700D03722 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C14E2284AA0C700D03722 /* IndexView.swift */; };
 		F95C14E6284AB16900D03722 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95C14E5284AB16900D03722 /* PracticeView.swift */; };
 		F98991A1284EA3B70044037B /* InputAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98991A0284EA3B70044037B /* InputAlert.swift */; };
+		F9F8133F2851582200F5B8CE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F8133E2851582200F5B8CE /* HistoryView.swift */; };
 		F9F903A7284D35F8005EDC32 /* PracticeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F903A6284D35F8005EDC32 /* PracticeSession.swift */; };
 		F9F903A9284D3846005EDC32 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F903A8284D3845005EDC32 /* Date+Helpers.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		F95C14E2284AA0C700D03722 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		F95C14E5284AB16900D03722 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
 		F98991A0284EA3B70044037B /* InputAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAlert.swift; sourceTree = "<group>"; };
+		F9F8133E2851582200F5B8CE /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		F9F903A6284D35F8005EDC32 /* PracticeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSession.swift; sourceTree = "<group>"; };
 		F9F903A8284D3845005EDC32 /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				F95C14E2284AA0C700D03722 /* IndexView.swift */,
 				F95C14E5284AB16900D03722 /* PracticeView.swift */,
 				F98991A0284EA3B70044037B /* InputAlert.swift */,
+				F9F8133E2851582200F5B8CE /* HistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				F95C14E6284AB16900D03722 /* PracticeView.swift in Sources */,
 				F9438A3C284974C30063FDE2 /* ContentView.swift in Sources */,
 				F915871128497A8D00105AE3 /* DataStore.swift in Sources */,
+				F9F8133F2851582200F5B8CE /* HistoryView.swift in Sources */,
 				F95C14E3284AA0C700D03722 /* IndexView.swift in Sources */,
 				F9438A3A284974C30063FDE2 /* Ngondro_TrackerApp.swift in Sources */,
 			);
