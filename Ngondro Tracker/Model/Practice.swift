@@ -16,7 +16,9 @@ struct Practice: Identifiable, Codable {
   static let targetAmount = Expression<Int>("target_amount")
   static let currentAmount = Expression<Int>("current_amount")
   static let malaSize = Expression<Int>("mala_size")
-
+  
+  static let example = Practice(id: 1, name: "Refuge", image: "refuge")
+  
   var id: Int = 0
   var name: String = ""
   var image: String?

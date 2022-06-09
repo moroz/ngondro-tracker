@@ -98,8 +98,7 @@ struct PracticeView: View {
 
 struct PracticeView_Previews: PreviewProvider {
   static var previews: some View {
-    let practice = Practice(id: 1, name: "Refuge", image: "refuge")
-    return PracticeView(practice: practice)
+    return PracticeView(practice: Practice.example)
       .environmentObject(DataStore())
   }
 }
