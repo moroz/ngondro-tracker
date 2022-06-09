@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct EditPractice: View {
-  @Binding var practice: Practice
+  var practice: Practice
+  @State var draft: Practice
+  
+  init(practice pr: Practice) {
+    practice = pr
+    draft = practice
+  }
   
   var body: some View {
-    VStack {
+    ScrollView(.vertical) {
       VStack(alignment: .leading) {
-        Text("Name:")
-          .font(.headline)
-        TextField("Name", text: $practice.name)
-          .padding(10)
-          .background(Color(fromHex: "#f3f4f5"))
-          .cornerRadius(5.0)
+        LabeledTextField(label: "Name", value: $draft.name)
+        LabeledTextField(label: "Mala size", value: $draft.malaSize)
+        LabeledTextField(label: "Current amount", value: $draft.currentAmount)
+        LabeledTextField(label: "Target amount", value: $draft.targetAmount)
       }
-      .padding(.horizontal, 15)
     }
     .navigationTitle("Edit practice")
+    .toolbar {
+      Button("Save") {}
+    }
   }
 }
 
 struct EditPractice_Previews: PreviewProvider {
     static var previews: some View {
-      EditPractice(practice: .constant(Practice.example))
+      EditPractice(practice: (Practice.example))
     }
 }

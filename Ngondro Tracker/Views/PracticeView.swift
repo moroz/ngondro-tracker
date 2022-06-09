@@ -93,6 +93,16 @@ struct PracticeView: View {
     .ignoresSafeArea(edges: .bottom)
     .navigationTitle(practice.name)
     .navigationBarTitleDisplayMode(.inline)
+    .toolbar {
+      HStack {
+        Text("")
+        NavigationLink {
+          EditPractice(practice: practice)
+        } label: {
+          Text("Edit")
+        }
+      }
+    }
   }
 }
 
