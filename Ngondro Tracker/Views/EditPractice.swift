@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditPractice: View {
   @EnvironmentObject var dataStore: DataStore
-  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+  @Environment(\.presentationMode) var presentationMode
   var practice: Practice
   @Binding var amount: Int
   @State var draft: Practice = Practice()
