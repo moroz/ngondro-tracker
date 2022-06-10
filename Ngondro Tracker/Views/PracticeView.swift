@@ -94,13 +94,10 @@ struct PracticeView: View {
     .navigationTitle(practice.name)
     .navigationBarTitleDisplayMode(.inline)
     .toolbar {
-      HStack {
-        Text("")
-        NavigationLink {
-          EditPractice(practice: practice)
-        } label: {
-          Text("Edit")
-        }
+      NavigationLink {
+        EditPractice(practice: practice)
+      } label: {
+        Text("Edit")
       }
     }
   }
