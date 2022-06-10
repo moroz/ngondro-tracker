@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PracticeView: View {
   @EnvironmentObject var dataStore: DataStore
-  let practice: Practice
+  var practice: Practice
   @State private var amount: Int
 
   init(practice: Practice) {
@@ -95,7 +95,7 @@ struct PracticeView: View {
     .navigationBarTitleDisplayMode(.inline)
     .toolbar {
       NavigationLink {
-        EditPractice(practice: practice)
+        EditPractice(practice: practice, amount: $amount)
       } label: {
         Text("Edit")
       }

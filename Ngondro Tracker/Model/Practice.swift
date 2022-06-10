@@ -16,10 +16,10 @@ struct Practice: Identifiable, Codable {
   static let targetAmount = Expression<Int>("target_amount")
   static let currentAmount = Expression<Int>("current_amount")
   static let malaSize = Expression<Int>("mala_size")
-  
+
   static let example = Practice(id: 1, name: "Refuge", image: "refuge")
-  
-  var id: Int = 0
+
+  var id: Int?
   var name: String = ""
   var image: String?
   var targetAmount: Int = 111_111
@@ -76,13 +76,21 @@ struct Practice: Identifiable, Codable {
       _ = try db.run(
         "update practices set current_amount = current_amount + ? where id = ?",
         amount, id)
-      _ = try PracticeSession.addAmount(store: store, practiceId: id, amount: amount)
+      _ = try PracticeSession.addAmount(store: store, practiceId: id!, amount: amount)
     }
 
     let newAmount = try db.scalar(
-      Practice.table.select(Practice.currentAmount).filter(Practice.id == self.id))
+      Practice.table.select(Practice.currentAmount).filter(Practice.id == self.id!))
 
     return newAmount
+  }
+  
+  func save(store: DataStore) throws {
+    let query = Self.table.filter(Self.id == id!).update(
+      Self.name <- name, Self.malaSize <- malaSize, Self.targetAmount <- targetAmount,
+      Self.currentAmount <- currentAmount
+    )
+    try store.db.run(query)
   }
 
   static let seedData = [
@@ -92,9 +100,8 @@ struct Practice: Identifiable, Codable {
 
   static func seed(store: DataStore) throws {
     try store.db.transaction {
-      for (i, (practice, img)) in seedData.enumerated() {
+      for (practice, img) in seedData {
         var row = Self()
-        row.id = i
         row.name = practice
         row.image = img
         try store.db.run(table.insert(row))

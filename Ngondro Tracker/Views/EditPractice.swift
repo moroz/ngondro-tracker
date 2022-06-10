@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct EditPractice: View {
+  @EnvironmentObject var dataStore: DataStore
+  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   var practice: Practice
-  @State var draft: Practice
-  
-  init(practice pr: Practice) {
-    practice = pr
-    draft = practice
+  @Binding var amount: Int
+  @State var draft: Practice = Practice()
+
+  func saveChanges() {
+    if let _ = try? draft.save(store: dataStore) {
+      amount = draft.currentAmount
+      try? dataStore.loadPractices()
+    }
+    presentationMode.wrappedValue.dismiss()
   }
-  
+
   var body: some View {
     ScrollView(.vertical) {
       VStack(alignment: .leading) {
@@ -27,13 +33,16 @@ struct EditPractice: View {
     }
     .navigationTitle("Edit practice")
     .toolbar {
-      Button("Save") {}
+      Button("Save") { saveChanges() }
+    }
+    .onAppear {
+      draft = practice
     }
   }
 }
 
 struct EditPractice_Previews: PreviewProvider {
-    static var previews: some View {
-      EditPractice(practice: (Practice.example))
-    }
+  static var previews: some View {
+    EditPractice(practice: Practice.example, amount: .constant(2137))
+  }
 }

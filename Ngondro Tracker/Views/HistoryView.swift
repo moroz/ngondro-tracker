@@ -15,7 +15,7 @@ struct HistoryView: View {
 
   func loadEntries() throws {
     do {
-      entries = try PracticeSession.filterByPractice(store: dataStore, practiceId: practice.id)
+      entries = try PracticeSession.filterByPractice(store: dataStore, practiceId: practice.id!)
     } catch {
       print(error)
     }
